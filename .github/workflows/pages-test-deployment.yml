@@ -17,7 +17,7 @@ jobs:
           cache: yarn
       - name: Install dependencies
         working-directory: ./content
-        run: yarn install --frozen-lockfile
+        run: yarn install --pure-lockfile --non-interactive
       - name: Test build website
         working-directory: ./content
         run: yarn build
