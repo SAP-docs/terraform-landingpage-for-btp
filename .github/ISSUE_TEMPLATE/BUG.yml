@@ -1,0 +1,42 @@
+name: 🐞 Bug
+description: File a bug or an issue for the Terraform on SAP BTP Landing Page
+title: "[BUG] <your title comes here>"
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Main area of the Terraform on SAP BTP Landing Page that is affected?
+      options:
+        - Where to start?
+        - The Terraform Providers
+        - In the Bigger Context
+        - Terraform Exporter for SAP BTP
+        - Terraform Sample Code
+        - Webinars and Videos
+        - Latest Versions
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: How can we recreate this bug? Be specific.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Observed behavior
+      description: What you're experiencing that you believe is a bug.
+      placeholder: |
+        If applicable, add screenshots to help explain your problem.
+
+        Tip: You can attach images or files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Desired behavior
+      description: What you're expecting to happen.
+    validations:
+      required: true
