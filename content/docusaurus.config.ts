@@ -119,11 +119,11 @@ const config: Config = {
 
               {
                 label: 'GitHub Repository',
-                href: 'https://github.com/SAP/btp-solution-diagrams',
+                href: 'https://github.com/SAP-docs/terraform-landingpage-for-btp',
               },
               {
                 label: 'GitHub Issues',
-                href: 'https://github.com/SAP/btp-solution-diagrams/issues',
+                href: 'https://github.com/SAP-docs/terraform-landingpage-for-btp/issues',
               }
             ],
           },
