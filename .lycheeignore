@@ -1,0 +1,3 @@
+https?://localhost.*
+https://developers.sap.com/*
+https://api.reuse.software/info/github.com/SAP-docs/terraform-landingpage-for-btp
