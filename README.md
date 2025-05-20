@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/btp-solution-diagrams)](https://api.reuse.software/info/github.com/SAP/btp-solution-diagrams) [![Deploy static content to Pages](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml) [![Periodic Link Checker](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/terraform-landingpage-for-btp)](https://api.reuse.software/info/github.com/SSAP-docs/terraform-landingpage-for-btp) [![Deploy static content to Pages](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml) [![Periodic Link Checker](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml)
 
 # Terraform on SAP BTP Landing Page
 
@@ -6,7 +6,7 @@
 
 This repository serves as a central landing page for all things Terraform and OpenTofu on SAP BTP. It helps you to get all relevant links and information about Terraform and OpenTofu on SAP BTP.
 
-Find a nicely rendered version of this page [here](https://sap.github.io/terraform-landingpage-for-btp/).
+Find a nicely rendered version of this page here(TODO ADD LINK).
 
 ## Support, Feedback, Contributing
 
