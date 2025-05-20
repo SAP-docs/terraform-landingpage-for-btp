@@ -1,13 +1,21 @@
-# @SAP-docs/repository-template
-Default templates of SAP docs' repositories. Provides template files including LICENSE, .reuse/dep5, etc... All repositories on github.com/SAP-docs will be created based on this template.
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/btp-solution-diagrams)](https://api.reuse.software/info/github.com/SAP/btp-solution-diagrams) [![Deploy static content to Pages](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/deploy-to-gh-pages.yml) [![Periodic Link Checker](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml/badge.svg)](https://github.com/SAP-docs/terraform-landingpage-for-btp/actions/workflows/periodic-link-watcher.yml)
 
-# Containing files
+# Terraform on SAP BTP Landing Page
 
-1. The LICENSE file:
-In the most cases, the license of projects in org `/sap-docs` is `CC-BY-4.0`.
+## About this page
 
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your open source project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
+This repository serves as a central landing page for all things Terraform and OpenTofu on SAP BTP. It helps you to get all relevant links and information about Terraform and OpenTofu on SAP BTP.
 
-3. The README.md file (This file):
-Please edit this file as it is the primary description file for your project.
+Find a nicely rendered version of this page [here](https://sap.github.io/terraform-landingpage-for-btp/).
+
+## Support, Feedback, Contributing
+
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP-docs/terraform-landingpage-for-btp/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+
+## Code of Conduct
+
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/SAP-docs/terraform-landingpage-for-btp?tab=coc-ov-file) at all times.
+
+## Licensing
+
+Copyright 2025 SAP SE or an SAP affiliate company and terraform-landingpage-for-btp contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP-docs/terraform-landingpage-for-btp).
