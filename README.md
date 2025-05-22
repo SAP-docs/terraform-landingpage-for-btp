@@ -6,7 +6,7 @@
 
 This repository serves as a central landing page for all things Terraform and OpenTofu on SAP BTP. It helps you to get all relevant links and information about Terraform and OpenTofu on SAP BTP.
 
-Find a nicely rendered version of this page here(TODO ADD LINK).
+Find a nicely rendered version of this page [here](https://sap-docs.github.io/terraform-landingpage-for-btp/).
 
 ## Support, Feedback, Contributing
 
