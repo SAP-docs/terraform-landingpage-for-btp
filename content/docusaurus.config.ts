@@ -64,6 +64,13 @@ const config: Config = {
         respectPrefersColorScheme: true,
         disableSwitch: false
       },
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'sap, btp, terraform, automation, iac, opentofu',
+        },
+      ],
+      image: 'img/thumbnail.png',
       navbar: {
         title: 'Terraform on SAP BTP',
         logo: {
