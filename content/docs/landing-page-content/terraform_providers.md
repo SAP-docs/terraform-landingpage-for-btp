@@ -46,4 +46,6 @@ GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-
 
 ## On the horizon
 
-Terraform Provider for SAP Cloud Connector
+### Terraform Provider for SAP Cloud Connector
+
+GitHub repository: https://github.com/SAP/terraform-provider-scc
