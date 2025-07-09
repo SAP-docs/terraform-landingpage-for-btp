@@ -28,7 +28,11 @@ Here you find the latest versions of the Terraform providers and the Terraform E
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a></td>
-      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.1.0-beta2">v0.1.0-beta2</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.2.0-beta1">v0.2.0-beta1</a></td>
+    </tr>
+   <tr>
+      <td><a href="https://github.com/SAP/terraform-provider-scc">Terraform Provider for SAP Cloud Connector</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-scc/releases/tag/v0.1.0-beta1">v0.1.0-beta1</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-exporter-btp">Terraform Exporter for SAP BTP</a></td>

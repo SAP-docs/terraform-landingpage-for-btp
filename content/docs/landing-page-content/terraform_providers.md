@@ -44,8 +44,10 @@ Documentation (identical content):
 
 GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-services
 
-## On the horizon
-
 ### Terraform Provider for SAP Cloud Connector
+
+Documentation (identical content):
+- 	Hashicorp Registry: https://registry.terraform.io/providers/SAP/scc/latest
+- 	OpenTofu Registry: https://search.opentofu.org/provider/sap/scc/latest
 
 GitHub repository: https://github.com/SAP/terraform-provider-scc
