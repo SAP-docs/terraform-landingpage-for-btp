@@ -39,15 +39,15 @@ GitHub repository: https://github.com/cloudfoundry/terraform-provider-cloudfound
 ### Terraform Provider for SAP Cloud Identity Services
 
 Documentation (identical content):
-- 	Hashicorp Registry: https://registry.terraform.io/providers/SAP/sap-cloud-identity-services/latest
-- 	OpenTofu Registry: https://search.opentofu.org/provider/sap/sap-cloud-identity-services/latest
+- Hashicorp Registry: https://registry.terraform.io/providers/SAP/sap-cloud-identity-services/latest
+- OpenTofu Registry: https://search.opentofu.org/provider/sap/sap-cloud-identity-services/latest
 
 GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-services
 
 ### Terraform Provider for SAP Cloud Connector
 
 Documentation (identical content):
-- 	Hashicorp Registry: https://registry.terraform.io/providers/SAP/scc/latest
-- 	OpenTofu Registry: https://search.opentofu.org/provider/sap/scc/latest
+- Hashicorp Registry: https://registry.terraform.io/providers/SAP/scc/latest
+- OpenTofu Registry: https://search.opentofu.org/provider/sap/scc/latest
 
 GitHub repository: https://github.com/SAP/terraform-provider-scc
