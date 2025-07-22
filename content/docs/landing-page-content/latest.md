@@ -20,11 +20,11 @@ Here you find the latest versions of the Terraform providers and the Terraform E
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a></td>
-      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.14.0">v1.14.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.15.0">v1.15.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a></td>
-      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.7.0">v1.7.0</a></td>
+      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.8.0">v1.8.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a></td>
