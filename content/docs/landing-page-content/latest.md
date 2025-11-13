@@ -24,7 +24,7 @@ Here you find the latest versions of the Terraform providers and the Terraform E
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a></td>
-      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.9.0">v1.9.0</a></td>
+      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.10.0">v1.10.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a></td>
