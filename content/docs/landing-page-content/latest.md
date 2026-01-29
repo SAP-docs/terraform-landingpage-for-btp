@@ -28,7 +28,7 @@ Here you find the latest versions of the Terraform providers and the Terraform E
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-scc">Terraform Provider for SAP Cloud Connector</a></td>
-      <td><a href="https://github.com/SAP/terraform-provider-scc/releases/tag/v1.0.0">v1.0.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-scc/releases/tag/v1.1.0">v1.1.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-exporter-btp">Terraform Exporter for SAP BTP</a></td>
