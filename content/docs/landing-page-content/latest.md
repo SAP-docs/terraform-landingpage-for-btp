@@ -36,7 +36,7 @@ Here you find the latest versions of the Terraform providers and the Terraform E
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a></td>
-      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.3.0-beta1">v0.3.0-beta1</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.4.0-beta1">v0.4.0-beta1</a></td>
     </tr>
   </tbody>
 </table>
