@@ -20,7 +20,7 @@ Here you find the latest versions of the Terraform providers and the Terraform E
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a> (<a href="https://registry.terraform.io/providers/SAP/btp/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.21.3">v1.21.3</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.22.0">v1.22.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a> (<a href="https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs">docs</a>)</td>
