@@ -53,3 +53,6 @@ Documentation (identical content):
 GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-services
 
 
+## On the horizon
+
+### Terraform provider for SAP BTP Services
