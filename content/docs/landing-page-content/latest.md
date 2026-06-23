@@ -26,7 +26,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a> (<a href="https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.15.0">v1.15.0</a></td>
+      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.16.0">v1.16.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-scc">Terraform Provider for SAP Cloud Connector</a> (<a href="https://registry.terraform.io/providers/SAP/scc/latest/docs">docs</a>)</td>
@@ -35,6 +35,10 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a> (<a href="https://registry.terraform.io/providers/SAP/sap-cloud-identity-services/latest/docs">docs</a>)</td>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.6.0-beta1">v0.6.0-beta1</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/SAP/terraform-provider-btp-services">Terraform Provider for SAP BTP Services</a> (<a href="https://registry.terraform.io/providers/SAP/btp-services/latest">docs</a>)</td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp-services/releases/tag/v0.1.0-beta1">v0.1.0-beta1</a></td>
     </tr>
   </tbody>
 </table>

@@ -52,6 +52,13 @@ Documentation (identical content):
 
 GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-services
 
+### Terraform Provider for SAP BTP Services
+
+Documentation (identical content):
+- Hashicorp Registry: https://registry.terraform.io/providers/SAP/btp-services/latest 
+
+GitHub repository: https://github.com/SAP/terraform-provider-btp-services
+
 
 ## On the horizon
 
