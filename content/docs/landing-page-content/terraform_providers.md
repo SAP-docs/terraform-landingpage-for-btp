@@ -56,6 +56,7 @@ GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-
 
 Documentation (identical content):
 - Hashicorp Registry: https://registry.terraform.io/providers/SAP/btp-services/latest 
+- OpenTofu Registry: https://search.opentofu.org/provider/sap/btp-services/latest
 
 GitHub repository: https://github.com/SAP/terraform-provider-btp-services
 
