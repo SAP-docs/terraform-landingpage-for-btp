@@ -55,7 +55,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments">Terraform Module for Role Collection Assignments on SAP BTP</a> (<a href="https://registry.terraform.io/modules/SAP/sap-btp-role-collection-assignments/btp/latest">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/releases/tag/v1.0.0">v1.0.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/releases/tag/v1.0.1">v1.0.1</a></td>
     </tr>
     </tbody>
 </table>
