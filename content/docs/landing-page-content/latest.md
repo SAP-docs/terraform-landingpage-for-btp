@@ -30,7 +30,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-scc">Terraform Provider for SAP Cloud Connector</a> (<a href="https://registry.terraform.io/providers/SAP/scc/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-scc/releases/tag/v1.4.0">v1.4.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-scc/releases/tag/v1.5.0">v1.5.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a> (<a href="https://registry.terraform.io/providers/SAP/sap-cloud-identity-services/latest/docs">docs</a>)</td>
