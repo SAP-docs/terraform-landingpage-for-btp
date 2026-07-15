@@ -34,7 +34,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services">Terraform Provider for SAP Cloud Identity Services</a> (<a href="https://registry.terraform.io/providers/SAP/sap-cloud-identity-services/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.6.0-beta1">v0.6.0-beta1</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-sap-cloud-identity-services/releases/tag/v0.7.0-beta1">v0.7.0-beta1</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp-services">Terraform Provider for SAP BTP Services</a> (<a href="https://registry.terraform.io/providers/SAP/btp-services/latest">docs</a>)</td>
