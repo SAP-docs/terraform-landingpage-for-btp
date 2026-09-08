@@ -26,7 +26,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a> (<a href="https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.17.0">v1.17.0</a></td>
+      <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry/releases/tag/v1.18.0">v1.18.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-scc">Terraform Provider for SAP Cloud Connector</a> (<a href="https://registry.terraform.io/providers/SAP/scc/latest/docs">docs</a>)</td>
