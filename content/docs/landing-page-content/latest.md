@@ -22,7 +22,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a> (<a href="https://registry.terraform.io/providers/SAP/btp/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.26.0">v1.26.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.27.0">v1.27.0</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a> (<a href="https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs">docs</a>)</td>
@@ -38,7 +38,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     </tr>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp-services">Terraform Provider for SAP BTP Services</a> (<a href="https://registry.terraform.io/providers/SAP/btp-services/latest">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-btp-services/releases/tag/v0.1.0-beta1">v0.1.0-beta1</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp-services/releases/tag/v1.0.0-rc1">v1.0.0-rc1</a></td>
     </tr>
   </tbody>
 </table>
