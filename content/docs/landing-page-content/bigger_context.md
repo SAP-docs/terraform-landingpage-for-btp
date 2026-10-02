@@ -13,4 +13,4 @@ Terraform is one building block in the overall administration journey of SAP BTP
 To answer this question, we recommend the following places:
 
 -	SAP BTP Administrator's Guide: https://help.sap.com/docs/btp/btp-admin-guide/btp-admin-guide
--	Learning Journey - Administrating SAP Business Technology Platform: https://learning.sap.com/learning-journeys/administrating-sap-business-technology-platform
+-	Learning Journey - Administrating SAP Business Technology Platform: https://learning.sap.com/learning-journeys/administrating-sap-business-technology-platform-1
