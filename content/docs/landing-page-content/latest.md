@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 tags:
   - Versions
   - Latest
@@ -73,6 +73,23 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
     <tr>
       <td><a href="https://github.com/SAP/terraform-exporter-btp">Terraform Exporter for SAP BTP</a> (<a href="https://sap.github.io/terraform-exporter-btp/">docs</a>)</td>
       <td><a href="https://github.com/SAP/terraform-exporter-btp/releases/tag/v1.6.0">v1.6.0</a></td>
+    </tr>
+  </tbody>
+</table>
+
+## IaC Spec Kit for SAP Business AI Platform
+
+<table class="latest-table">
+  <thead>
+    <tr>
+      <th>AI/Agentic Tool</th>
+      <th>Latest Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/SAP/iac-spec-kit-for-sap-business-ai-platform">IaC Spec Kit for SAP Business AI Platform</a> (<a href="https://sap.github.io/iac-spec-kit-for-sap-business-ai-platform/">docs</a>)</td>
+      <td><a href="https://github.com/SAP/iac-spec-kit-for-sap-business-ai-platform/releases/tag/v0.1.0">v0.1.0</a></td>
     </tr>
   </tbody>
 </table>
