@@ -42,6 +42,14 @@ Documentation (identical content):
 
 GitHub repository: https://github.com/SAP/terraform-provider-scc
 
+### Terraform Provider for SAP BTP Services
+
+Documentation (identical content):
+- Hashicorp Registry: https://registry.terraform.io/providers/SAP/btp-services/latest
+- OpenTofu Registry: https://search.opentofu.org/provider/sap/btp-services/latest
+
+GitHub repository: https://github.com/SAP/terraform-provider-btp-services
+
 ## Beta
 
 ### Terraform Provider for SAP Cloud Identity Services
@@ -51,16 +59,3 @@ Documentation (identical content):
 - OpenTofu Registry: https://search.opentofu.org/provider/sap/sap-cloud-identity-services/latest
 
 GitHub repository: https://github.com/SAP/terraform-provider-sap-cloud-identity-services
-
-### Terraform Provider for SAP BTP Services
-
-Documentation (identical content):
-- Hashicorp Registry: https://registry.terraform.io/providers/SAP/btp-services/latest 
-- OpenTofu Registry: https://search.opentofu.org/provider/sap/btp-services/latest
-
-GitHub repository: https://github.com/SAP/terraform-provider-btp-services
-
-
-## On the horizon
-
-### Terraform provider for SAP BTP Services
