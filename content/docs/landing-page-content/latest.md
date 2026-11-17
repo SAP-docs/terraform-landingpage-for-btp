@@ -22,7 +22,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-provider-btp">Terraform Provider for SAP BTP</a> (<a href="https://registry.terraform.io/providers/SAP/btp/latest/docs">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.28.0">v1.28.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-provider-btp/releases/tag/v1.28.1">v1.28.1</a></td>
     </tr>
     <tr>
       <td><a href="https://github.com/cloudfoundry/terraform-provider-cloudfoundry">Terraform Provider for Cloud Foundry</a> (<a href="https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs">docs</a>)</td>
@@ -72,7 +72,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-exporter-btp">Terraform Exporter for SAP BTP</a> (<a href="https://sap.github.io/terraform-exporter-btp/">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-exporter-btp/releases/tag/v1.6.0">v1.6.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-exporter-btp/releases/tag/v2.0.0">v2.0.0</a></td>
     </tr>
   </tbody>
 </table>
