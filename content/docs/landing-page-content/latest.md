@@ -72,7 +72,7 @@ Here you find the latest versions of the Terraform providers, Terraform modules 
   <tbody>
     <tr>
       <td><a href="https://github.com/SAP/terraform-exporter-btp">Terraform Exporter for SAP BTP</a> (<a href="https://sap.github.io/terraform-exporter-btp/">docs</a>)</td>
-      <td><a href="https://github.com/SAP/terraform-exporter-btp/releases/tag/v2.0.0">v2.0.0</a></td>
+      <td><a href="https://github.com/SAP/terraform-exporter-btp/releases/tag/v2.0.1">v2.0.1</a></td>
     </tr>
   </tbody>
 </table>
