@@ -1,0 +1,10 @@
+{
+  "label": "Statistics",
+  "collapsible": true,
+  "collapsed": true,
+  "position": 10,
+  "link": {
+    "type": "doc",
+    "id": "landing-page-content/statistics/index"
+  }
+}
