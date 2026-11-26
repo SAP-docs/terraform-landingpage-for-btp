@@ -4,8 +4,9 @@
 
 // Orchestrates the daily statistics refresh. Every source is wrapped in its own
 // try/catch so one dead endpoint can't lose the other sources' data (the Python
-// predecessor aborted the whole run on any failure). Exits non-zero if anything
-// failed, so CI surfaces it — but only after attempting every source.
+// predecessor aborted the whole run on any failure). Partial success still
+// commits+deploys; we only exit non-zero when EVERY source failed, so a single
+// dead endpoint doesn't block the deploy of the sources that did refresh.
 
 import { PROVIDERS, TOOLS, MODULES } from '../stats.config.mjs';
 import { fetchProvider } from './lib/registry.mjs';
@@ -14,8 +15,10 @@ import { fetchTool } from './lib/exporter.mjs';
 
 const token = process.env.GITHUB_TOKEN;
 let failures = 0;
+let attempts = 0;
 
 async function run(label, fn) {
+  attempts++;
   try {
     await fn();
     console.log(`ok   ${label}`);
@@ -32,8 +35,14 @@ for (const t of TOOLS) {
   await run(`tool ${t.key}`, () => fetchTool(t, token));
 }
 
-if (failures) {
-  console.error(`\n${failures} source(s) failed.`);
+// Only abort the run when nothing refreshed — otherwise commit the sources that
+// did and let the deploy proceed.
+if (failures && failures === attempts) {
+  console.error(`\nAll ${attempts} source(s) failed.`);
   process.exit(1);
 }
-console.log('\nAll sources updated.');
+if (failures) {
+  console.warn(`\n${failures}/${attempts} source(s) failed; committing the rest.`);
+} else {
+  console.log('\nAll sources updated.');
+}

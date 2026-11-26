@@ -4,16 +4,30 @@
 
 const path = require('path');
 const fs = require('fs');
-const Papa = require('papaparse');
 
 // Repo root is four levels up from this file (content/src/plugins/load-stats-data).
 const DATA_DIR = path.resolve(__dirname, '..', '..', '..', '..', 'data');
 
+// ponytail: split-based parse — these CSVs are flat (dates, ints, version
+// strings), no quoting/escaping. Bring back a real parser only if a column
+// ever needs commas/quotes. dynamicTyping: a cell that's a finite number
+// becomes one, everything else stays a string (matches the old papaparse opts).
 function parseCsv(fileName) {
   const full = path.join(DATA_DIR, fileName);
   if (!fs.existsSync(full)) return [];
-  const csv = fs.readFileSync(full, 'utf8');
-  return Papa.parse(csv, { header: true, dynamicTyping: true, skipEmptyLines: true }).data;
+  const lines = fs.readFileSync(full, 'utf8').split('\n').filter((l) => l.trim());
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(',');
+  return lines.slice(1).map((line) => {
+    const cells = line.split(',');
+    const row = {};
+    headers.forEach((h, i) => {
+      const cell = cells[i];
+      const num = Number(cell);
+      row[h] = cell !== '' && cell !== undefined && Number.isFinite(num) ? num : cell;
+    });
+    return row;
+  });
 }
 
 // Build-time CSV loader. Reads every CSV named in stats.config.mjs, parses it,

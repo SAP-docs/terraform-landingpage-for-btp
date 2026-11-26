@@ -31,7 +31,6 @@ export const PROVIDERS = [
     registry: "https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest",
     csv: "cf_cf_downloads.csv",
     versionsCsv: "cf_cf_downloads_versions.csv",
-    combineRcBeta: false,
   },
   {
     key: "sci",
