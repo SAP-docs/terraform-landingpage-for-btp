@@ -74,6 +74,15 @@ export const TOOLS = [
     // How many most-recent releases to read per run.
     releaseCount: 5,
   },
+  {
+    key: "speckit",
+    label: "IaC Spec Kit for SAP Business AI Platform",
+    owner: "SAP",
+    repo: "iac-spec-kit-for-sap-business-ai-platform",
+    source: "https://github.com/SAP/iac-spec-kit-for-sap-business-ai-platform",
+    csv: "tf_speckit_downloads_stats.csv",
+    releaseCount: 5,
+  },
 ];
 
 // Terraform Registry modules (v1 modules endpoint → running download total).
