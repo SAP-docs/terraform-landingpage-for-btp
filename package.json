@@ -1,1 +1,17 @@
-{}
+{
+  "name": "terraform-landingpage-for-btp-stats",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Statistics data fetcher for the Terraform on SAP BTP landing page.",
+  "type": "module",
+  "scripts": {
+    "fetch-stats": "node scripts/fetch-stats.mjs",
+    "gen-stats-pages": "node scripts/gen-stats-pages.mjs"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.1.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

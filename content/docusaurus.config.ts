@@ -29,6 +29,7 @@ const config: Config = {
 
   plugins: [
     './src/plugins/init-ui5-theme',
+    './src/plugins/load-stats-data',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {

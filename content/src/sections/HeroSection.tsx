@@ -3,7 +3,7 @@ import React from 'react'
 import '@ui5/webcomponents-icons/dist/AllIcons';
 
 
-export default function HeroSection(): JSX.Element {
+export default function HeroSection(): React.JSX.Element {
   return (
     <section >
       <br />

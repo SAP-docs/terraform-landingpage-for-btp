@@ -6,6 +6,13 @@ on:
   push:
     branches: [pre-version]
 
+  # Rebuild after the daily data refresh. The data job commits via the GitHub
+  # API (github-actions bot), which does NOT fire the push event above, so the
+  # deploy is retriggered here instead.
+  workflow_run:
+    workflows: ["Update statistics data"]
+    types: [completed]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -24,6 +31,8 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    # Skip when the triggering data refresh failed; always run on push/dispatch.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,6 +40,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: pre-version
       - name: Set up Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:

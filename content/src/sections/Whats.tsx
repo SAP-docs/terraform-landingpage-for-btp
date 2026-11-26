@@ -5,7 +5,7 @@ import '@ui5/webcomponents-icons/dist/AllIcons';
 import { Button } from '@ui5/webcomponents-react';
 
 
-export default function OverviewSection(): JSX.Element {
+export default function OverviewSection(): React.JSX.Element {
   return (
     <section >
       <br />

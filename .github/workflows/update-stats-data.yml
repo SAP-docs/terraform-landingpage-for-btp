@@ -1,0 +1,45 @@
+# Fetches download/usage statistics and commits the refreshed CSVs under data/.
+# Runs on pre-version so the committed data lands on the branch GitHub Pages
+# builds from; the deploy workflow picks it up via its workflow_run trigger.
+name: Update statistics data
+
+on:
+  workflow_dispatch:
+
+  # Daily refresh. Off-peak, off the :00 mark.
+  schedule:
+    - cron: '47 2 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: pre-version
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 20.x
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch statistics data
+        run: node scripts/fetch-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Commit refreshed data (signed, via GitHub API)
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            const createSignedCommit = require('./.github/scripts/create-signed-commit.js');
+            await createSignedCommit({ github, context, core, exec });

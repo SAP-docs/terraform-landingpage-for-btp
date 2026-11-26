@@ -5,7 +5,7 @@ import { Button } from '@ui5/webcomponents-react';
 import '@ui5/webcomponents-icons/dist/AllIcons';
 
 
-export default function GuideSection(): JSX.Element {
+export default function GuideSection(): React.JSX.Element {
   return (
     <section >
       <div className="container">
