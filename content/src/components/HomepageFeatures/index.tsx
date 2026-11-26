@@ -1,3 +1,4 @@
+import {type ReactNode} from 'react';
 import clsx from 'clsx';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from './styles.module.css';
@@ -5,7 +6,7 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   image: string;
-  description: JSX.Element;
+  description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -41,7 +42,7 @@ function Feature({ title, image, description }: FeatureItem) {
 }
 
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): ReactNode {
   return (
 
     <section className={styles.features}>

@@ -28,7 +28,6 @@ assert.equal(monthLabel("2026-06"), "Jun 26");
   const out = cumulativeFromTotals([
     { date_retrieval: "2026-06-26", this_week: 0, this_month: 0, this_year: 0, all_time: 200 },
     { date_retrieval: "2026-06-25", this_week: 0, this_month: 0, this_year: 0, all_time: 150 },
-    // @ts-expect-error invalid row stays out
     { date_retrieval: "", this_week: 0, this_month: 0, this_year: 0, all_time: NaN },
   ]);
   assert.equal(out.length, 2);
