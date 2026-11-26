@@ -65,21 +65,21 @@ assert.equal(monthLabel("2026-06"), "Jun 26");
 // Each row models a daily snapshot of a (release, binary) cumulative
 // counter — the format the exporter pipeline writes. Real binaries embed
 // the release version in their name (btptf_1.6.0_linux_amd64, …), so
-// (date, binary) is unique per snapshot. June 1 re-snapshots v1's binaries
-// (unchanged) and adds v2's newly-released binary at 10.
+// (date, binary) is unique per snapshot. Each run snapshots only the few
+// most-recent releases, so older binaries drop OUT of later snapshots;
+// exporterCumulative must carry their last-known count forward.
 {
   const rows = [
     { date_retrieval: "2026-05-01", release: "v1", binary: "btptf_v1_linux_amd64", download_count: 5 },
     { date_retrieval: "2026-05-01", release: "v1", binary: "btptf_v1_darwin_arm64", download_count: 3 },
     // Same day, same binary, latest wins.
     { date_retrieval: "2026-05-01", release: "v1", binary: "btptf_v1_linux_amd64", download_count: 7 },
-    // June snapshot: v1 totals unchanged, v2 newly released at 10.
-    { date_retrieval: "2026-06-01", release: "v1", binary: "btptf_v1_linux_amd64", download_count: 7 },
-    { date_retrieval: "2026-06-01", release: "v1", binary: "btptf_v1_darwin_arm64", download_count: 3 },
+    // June snapshot: v1 has rotated out (only newest releases snapshotted),
+    // v2 newly released at 10. v1's 7+3 must be carried forward, not dropped.
     { date_retrieval: "2026-06-01", release: "v2", binary: "btptf_v2_linux_amd64", download_count: 10 },
   ];
   const cum = exporterCumulative(rows);
-  // May total = 7 + 3 = 10; June total = 7 + 3 + 10 = 20.
+  // May total = 7 + 3 = 10; June total = carried 10 + v2's 10 = 20 (monotonic).
   assert.deepEqual(cum.map((p) => p.y), [10, 20]);
   const monthly = exporterMonthly(rows);
   // Month-over-month delta: May 10 (from 0), June +10 (20 − 10).
@@ -89,6 +89,20 @@ assert.equal(monthLabel("2026-06"), "Jun 26");
   // sort order and keeps label↔value pairing intact.
   const byRelMap = Object.fromEntries(byRel.labels.map((l, i) => [l, byRel.values[i]]));
   assert.deepEqual(byRelMap, { v1: 10, v2: 10 });
+}
+
+// combineRcBeta folds rc/beta versions into one "Beta & RC" slice.
+{
+  const rows = [
+    { date_retrieval: "2026-06-26", version: "1.0.0", this_week: 0, this_month: 50, this_year: 0, all_time: 0 },
+    { date_retrieval: "2026-06-26", version: "1.1.0-beta1", this_week: 0, this_month: 5, this_year: 0, all_time: 0 },
+    { date_retrieval: "2026-06-26", version: "1.1.0-rc1", this_week: 0, this_month: 3, this_year: 0, all_time: 0 },
+  ];
+  const folded = versionsTopN(rows, "this_month", "all", true);
+  const map = Object.fromEntries(folded.labels.map((l, i) => [l, folded.values[i]]));
+  assert.deepEqual(map, { "1.0.0": 50, "Beta & RC": 8 });
+  const unfolded = versionsTopN(rows, "this_month", "all", false);
+  assert.equal(unfolded.labels.length, 3);
 }
 
 // Module monthly with first-day fallback.

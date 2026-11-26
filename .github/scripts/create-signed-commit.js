@@ -47,6 +47,8 @@ module.exports = async ({ github, context, core, exec }) => {
   };
 
   // GitHub signs this commit as github-actions[bot]; omit custom identity and signature.
+  const payloadBytes = JSON.stringify(input).length;
+  core.info(`Commit payload: ${additions.length} additions, ${deletions.length} deletions, ~${(payloadBytes / 1024 / 1024).toFixed(1)} MiB (GitHub rejects oversized requests).`);
   const result = await github.graphql(
     `mutation($input: CreateCommitOnBranchInput!) {
       createCommitOnBranch(input: $input) {

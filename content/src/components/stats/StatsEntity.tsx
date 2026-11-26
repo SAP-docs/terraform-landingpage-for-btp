@@ -36,7 +36,7 @@ function EntityInner({ kind, entityKey }: Props): React.JSX.Element {
         </p>
         <Block title="Downloads over time (cumulative)"><CumulativeChart points={cumulativeFromTotals(p.totals)} /></Block>
         <Block title="Downloads per month"><MonthlyChart data={monthlyFromTotals(p.totals)} /></Block>
-        <Block title="Downloads by version (this month)"><VersionPie rows={p.versions} field="this_month" /></Block>
+        <Block title="Downloads by version (this month)"><VersionPie rows={p.versions} field="this_month" combineRcBeta={p.combineRcBeta} /></Block>
       </div>
     );
   }

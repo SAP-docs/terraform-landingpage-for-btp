@@ -4,27 +4,10 @@
 
 import React, { useMemo, useState } from 'react';
 import { PieChart } from '@ui5/webcomponents-react-charts';
-import { fmt, versionsTopN, type ProviderVersionsRow } from '@site/src/lib/aggregate';
+import { fmt, versionsTopN, topNWithOther, type ProviderVersionsRow } from '@site/src/lib/aggregate';
 
 type Field = 'this_month' | 'this_year' | 'all_time';
 type Pairs = { labels: string[]; values: number[] };
-
-// Top-N + "Other" over pre-aggregated label/value pairs (e.g. exporter releases).
-function topNFromPairs(data: Pairs, n: number): Pairs {
-  const entries = data.labels
-    .map((label, i) => ({ label, value: data.values[i] ?? 0 }))
-    .filter((e) => e.value > 0)
-    .sort((a, b) => b.value - a.value);
-  const top = entries.slice(0, n);
-  const rest = entries.slice(n);
-  const labels = top.map((e) => e.label);
-  const values = top.map((e) => e.value);
-  if (rest.length) {
-    labels.push(`Other (${rest.length})`);
-    values.push(rest.reduce((s, e) => s + e.value, 0));
-  }
-  return { labels, values };
-}
 
 // Per-version (or per-release) usage as a pie, with a Top-N selector.
 // Pass either `rows` (provider version CSV rows) or pre-aggregated `data`.
@@ -33,20 +16,23 @@ export default function VersionPie({
   field = 'this_month',
   itemLabel = 'versions',
   data,
+  combineRcBeta = false,
 }: {
   rows?: ProviderVersionsRow[];
   field?: Field;
   itemLabel?: string;
   data?: Pairs;
+  combineRcBeta?: boolean;
 }): React.JSX.Element {
   const [topN, setTopN] = useState<'5' | '10' | '20' | 'all'>('10');
 
   const dataset = useMemo(() => {
-    const maxLen = data ? data.labels.length : (rows?.length ?? 0);
-    const n = topN === 'all' ? maxLen : parseInt(topN, 10);
-    const r = data ? topNFromPairs(data, n) : versionsTopN(rows ?? [], field, topN === 'all' ? 'all' : n);
+    const n = topN === 'all' ? 'all' : parseInt(topN, 10);
+    const r = data
+      ? topNWithOther(data.labels.map((label, i) => ({ label, value: data.values[i] ?? 0 })), n)
+      : versionsTopN(rows ?? [], field, n, combineRcBeta);
     return r.labels.map((label, i) => ({ label, value: r.values[i] }));
-  }, [rows, field, topN, data]);
+  }, [rows, field, topN, data, combineRcBeta]);
 
   return (
     <div>
