@@ -1,9 +1,12 @@
 const { execFileSync } = require('node:child_process');
 
 // The GitHub client and Actions Toolkit packages are supplied by actions/github-script.
-module.exports = async ({ github, context, core, exec }) => {
-  if (!context.ref.startsWith('refs/heads/')) {
-    throw new Error('Signed data updates require a branch ref.');
+// branchName: the branch to commit onto (must already exist on the remote at the
+// current local HEAD). Defaults to the triggering ref.
+module.exports = async ({ github, context, core, exec, branchName }) => {
+  branchName = branchName || (context.ref.startsWith('refs/heads/') ? context.ref.slice('refs/heads/'.length) : null);
+  if (!branchName) {
+    throw new Error('Signed data updates require a branch name.');
   }
 
   const git = async (...args) => (await exec.getExecOutput('git', args, { silent: true })).stdout;
@@ -12,6 +15,7 @@ module.exports = async ({ github, context, core, exec }) => {
   const changes = await git('diff', '--cached', '--name-status', '--no-renames', '-z');
   if (changes.length === 0) {
     core.info('No changes to commit.');
+    core.setOutput('committed', 'false');
     return;
   }
 
@@ -37,7 +41,7 @@ module.exports = async ({ github, context, core, exec }) => {
   const input = {
     branch: {
       repositoryNameWithOwner: `${context.repo.owner}/${context.repo.repo}`,
-      branchName: context.ref.slice('refs/heads/'.length),
+      branchName,
     },
     expectedHeadOid,
     message: { headline: '[tf_btp bot] Read data and update charts' },
@@ -62,4 +66,5 @@ module.exports = async ({ github, context, core, exec }) => {
     throw new Error(`Commit signature is not verified: ${commit.url}`);
   }
   core.info(`Created verified signed commit: ${commit.url}`);
+  core.setOutput('committed', 'true');
 };
