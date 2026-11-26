@@ -1,17 +1,19 @@
-# Fetches download/usage statistics and commits the refreshed CSVs under data/.
-# Runs on pre-version so the committed data lands on the branch GitHub Pages
-# builds from; the deploy workflow picks it up via its workflow_run trigger.
+# Fetches download/usage statistics and opens a PR with the refreshed CSVs
+# under data/. The data is committed as a verified signed commit (github-actions
+# bot) onto a fresh branch; merging the PR into main lands the data and triggers
+# the deploy workflow.
 name: Update statistics data
 
 on:
   workflow_dispatch:
 
-  # Daily refresh. Off-peak, off the :00 mark.
+  # Weekly refresh. Off-peak, off the :00 mark.
   schedule:
-    - cron: '47 2 * * *'
+    - cron: '47 2 * * 1'
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update-data:
@@ -19,8 +21,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -35,10 +35,35 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
+      - name: Compute branch name
+        id: branch
+        run: echo "name=update-data-$(date -u +%Y%m%d-%H%M%S)" >> "$GITHUB_OUTPUT"
+
+      # createCommitOnBranch requires the branch to exist on the remote at the
+      # current HEAD before it can commit onto it.
+      - name: Push empty branch
+        run: git push origin "HEAD:refs/heads/${{ steps.branch.outputs.name }}"
+
       - name: Commit refreshed data (signed, via GitHub API)
+        id: commit
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: ${{ github.token }}
           script: |
             const createSignedCommit = require('./.github/scripts/create-signed-commit.cjs');
-            await createSignedCommit({ github, context, core, exec });
+            await createSignedCommit({ github, context, core, exec, branchName: '${{ steps.branch.outputs.name }}' });
+
+      - name: Open pull request
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "${{ steps.branch.outputs.name }}" \
+            --title "chore: update statistics data (${{ steps.branch.outputs.name }})" \
+            --body "Automated weekly refresh of download/usage statistics under \`data/\`."
+
+      - name: Delete branch if no changes
+        if: steps.commit.outputs.committed != 'true'
+        run: git push origin --delete "${{ steps.branch.outputs.name }}"
