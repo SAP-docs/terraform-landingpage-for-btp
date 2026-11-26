@@ -46,7 +46,7 @@ The repo root is mostly metadata (LICENSE, REUSE.toml, README.md). All applicati
 - **Docusaurus 3** (`3.9.2`) with React 19
 - **SAP UI5 Web Components** (`@ui5/webcomponents-react`, `@ui5/webcomponents-fiori`, `@ui5/webcomponents-icons`) for SAP-branded UI elements
 - **@easyops-cn/docusaurus-search-local** for offline full-text search
-- Node.js >=18 required
+- Node.js >=20 required
 
 ## Deployment
 
